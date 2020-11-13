@@ -1,0 +1,91 @@
+/*
+List of items:
+
+By weight:
+
+"Gala Apples" : 0.10,
+"Grapes" : 0.25,
+"Fuji Apples" : 0.16,
+"Onions" : 0.14,
+"Bananas" : 0.30,
+"Garlic" : 0.15,
+"Walnuts" : 0.50,
+"Almonds" : 0.37,
+"Ginger" : 0.12,
+"Chives" : 0.15,
+
+By quantity:
+
+"Toothpaste" : 3.99,
+"Snickers Bar" : 1.99,
+"Magazine" : 3.49,
+"Lighter" : 0.99,
+"Chapstick" : 1.99,
+"Toothbrush" : 2.49,
+"Hair Brush" : 4.99,
+"Bottle of Water" : 1.29,
+"Pool Noodle" : 1.99,
+"Towel" : 4.99,
+
+
+Associated code:
+*/
+
+class Item
+{
+	private String name;
+	private String imageURL;
+	private String description;
+	private int price;
+	private int quantity;
+	
+	public Item(String name, int quantity, int price, String imageURL, String description)
+	{
+		this.name = name;
+		this.price = price;
+		this.imageURL = imageURL;
+		this.description = description;
+		this.quantity = quantity;
+	}
+	
+	public String getName()
+	{
+		return this.name;
+	}
+	public String getImageURL()
+	{
+		return this.imageURL;
+	}
+	public String getPrice()
+	{
+		return this.price * this.quantity;
+	}
+	public String getDescription()
+	{
+		return this.description;
+	}
+};
+
+List<Item> list = new ArrayList<Item>();
+
+list.add(new Item("Gala Apples", 1, 10, "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Malus-Gala.jpg/603px-Malus-Gala.jpg", "Gala is a clonally propagated apple cultivar with a mild and sweet flavour. In 2018, it surpassed Red Delicious as the apple cultivar with the highest production in the United States."));
+list.add(new Item("Grapes", 1, 25, "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Abhar-iran.JPG/450px-Abhar-iran.JPG", "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil."));
+list.add(new Item("Fuji Apples", 1, 16, "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Rosaceae_Malus_pumila_Malus_pumila_Var_domestica_Apples_Fuji.jpg/450px-Rosaceae_Malus_pumila_Malus_pumila_Var_domestica_Apples_Fuji.jpg", "The Fuji apple is an apple cultivar that originated as a cross between two American apple varieties—the Red Delicious and old Virginia Ralls Genet (sometimes cited as "Rawls Jennet") apples"));
+list.add(new Item("Onions", 1, 14, "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mixed_onions.jpg/600px-Mixed_onions.jpg", "The onion, also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium. Its close relatives include the garlic, scallion, shallot, leek, chive, and Chinese onion."));
+list.add(new Item("Bananas", 1, 30, "https://api.time.com/wp-content/uploads/2019/11/gettyimages-459761948.jpg?quality=85&w=1024&h=512&crop=1", "A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas."));
+list.add(new Item("Garlic", 1, 15, "https://upload.wikimedia.org/wikipedia/commons/3/39/Allium_sativum_Woodwill_1793.jpg", "Garlic is a species in the onion genus, Allium. Its close relatives include the onion, shallot, leek, chive, and Chinese onion."));
+list.add(new Item("Walnuts", 1, 50, "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/309/309834/walnuts.jpg?w=1155&h=1541", "A walnut is the nut of any tree of the genus Juglans, particularly the Persian or English walnut, Juglans regia. A walnut is the edible seed of a drupe, and is commonly consumed as a nut, despite not being a true botanical nut."));
+list.add(new Item("Almonds", 1, 37, "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-raw-almonds-royalty-free-image-683814187-1537885519.jpg?crop=0.66635xw:1xh;center,top&resize=480:*", "Almonds are the edible seeds of Prunus dulcis, more commonly called the almond tree. They are native to the Middle East, but the US is now the world's largest producer. The almonds you can buy in stores usually have the shell removed, revealing the edible nut inside. They are sold either raw or roasted."));
+list.add(new Item("Ginger", 1, 12, "https://images.immediate.co.uk/production/volatile/sites/30/2013/06/ginger-80e324d-scaled.jpg?quality=45&resize=960,872", "Aromatic, pungent and spicy, ginger adds a special flavor and zest to Asian stir fries and many fruit and vegetable dishes. Fresh ginger root is available year round in the produce section of your local market."));
+list.add(new Item("Chives", 1, 15, "https://blogstudio.s3.amazonaws.com/ferry-morse/85e004ffe31d55018e1914ad7c250bd1.jpg", "Chives, scientific name Allium schoenoprasum, is a species of flowering plant in the family Amaryllidaceae that produces edible leaves and flowers. Their close relatives include the common onions, garlic, shallot, leek, scallion, and Chinese onion."));
+
+list.add(new Item("Toothpaste", 1, 399, "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Toothbrush%2C_Toothpaste%2C_Dental_Care_%28571741%29_%28cropped%29.jpg/733px-Toothbrush%2C_Toothpaste%2C_Dental_Care_%28571741%29_%28cropped%29.jpg", "Toothpaste is used to promote oral hygiene: it is an abrasive that aids in removing dental plaque and food from the teeth, assists in suppressing halitosis, and delivers active ingredients to help prevent tooth decay and gum disease."));
+list.add(new Item("Snickers Bar", 1, 199, "https://cdn.heinemann-shop.com/images/h44/h86/9378508734494.jpg", "Hungry? Grab a Snickers."));
+list.add(new Item("Magazine", 1, 349, "https://cdn.britannica.com/92/191792-050-E1931160/Magazines-display-magazines-Canada-store-Toronto-Ontario.jpg", "A magazine is a periodical publication which is printed in gloss-coated and matte paper."));
+list.add(new Item("Lighter", 1, 99, "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/White_lighter_with_flame.JPG/448px-White_lighter_with_flame.JPG", "A lighter is a portable device which generates a flame, and can be used to ignite a variety of items, such as cigarettes, gas stoves, fireworks, candles or campfire."));
+list.add(new Item("Lip Balm", 1, 199, "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Homemade_lip_balm.jpg/748px-Homemade_lip_balm.jpg", "Lip balm or lip salve is a wax-like substance applied topically to the lips to moisturize and relieve chapped or dry lips, angular cheilitis, stomatitis, or cold sores."));
+list.add(new Item("Toothbrush", 1, 249, "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Toothbrush_x3_20050716_001.jpg/800px-Toothbrush_x3_20050716_001.jpg", "A toothbrush is an oral hygiene instrument used to clean the teeth, gums, and tongue. It consists of a head of tightly clustered bristles, atop of which toothpaste can be applied, mounted on a handle which facilitates the cleaning of hard-to-reach areas of the mouth."));
+list.add(new Item("Hairbrush", 1, 499, "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Conair-brush.jpg/800px-Conair-brush.jpg", "A hairbrush is a handle brush with rigid or soft spokes used in hair care for smoothing, styling, and detangling human hair."));
+list.add(new Item("Bottle of Water", 1, 129, "https://media.officedepot.com/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,h_666,q_auto,w_500/c_pad,h_666,w_500/v1/products/620007/620007_o02_073020?pgw=1", "Bottled water is drinking water (e.g., well water, distilled water, mineral water, or spring water) packaged in plastic or glass water bottles. Bottled water may be carbonated or not."));
+list.add(new Item("Pool Noodle", 1, 199, "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Noodle_%282780523440%29.jpg/786px-Noodle_%282780523440%29.jpg", "A pool noodle is a cylindrical piece of buoyant polyethylene foam, sometimes hollow. Noodles are used by people of all ages while swimming."));
+list.add(new Item("Towel", 1, 499, "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Zusammengelegte_Handt%C3%BCcher.jpg/700px-Zusammengelegte_Handt%C3%BCcher.jpg", "A towel is a piece of absorbent fabric or paper used for drying or wiping a body or a surface. It draws moisture through direct contact."));
